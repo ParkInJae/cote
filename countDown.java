@@ -1,5 +1,9 @@
+/*
 정수 start_num과 end_num이 주어질 때, start_num에서 end_num까지의 수를 차례로 담은 
 리스트를 return하도록 solution 함수를 완성 
+*/
+
+import java.util.stream.IntStream;
 
 class Solution {
     public int[] solution(int start_num, int end_num) {
@@ -54,7 +58,9 @@ class Solution {
     // 테스트 코드 작성
     public static void main(String[]args){
         Solution s = new Solution();
-        System.out.println(s.solution);
+        int st = 12;
+        int end =15;
+        System.out.println(s.solution(end, st));
     }
 
 
