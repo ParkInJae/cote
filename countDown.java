@@ -49,10 +49,13 @@ class Solution {
      */ 
 
     
-
-    
-    
     }   
+
+    // 테스트 코드 작성
+    public static void main(String[]args){
+        Solution s = new Solution();
+        System.out.println(s.solution);
+    }
 
 
 }

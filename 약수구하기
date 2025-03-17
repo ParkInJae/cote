@@ -29,4 +29,12 @@ class Solution {
         
         return answer;
     }
+    
+    // 테스트 코드 
+    public static void main (String[] args){
+        Solution s = new Solution();
+        int x = s.solution(12);
+        System.out.println(x);
+
+    }
 }

@@ -19,4 +19,12 @@ class Solution {
         // 자바 공식 문서에도. 문자열에 포함된 부호도 인식하여 정수로 변환할 수 있게 설계 되어있음 
         return answer;
     }
+
+
+
+    // 테스트코드 
+    public static void mmain(String []args){
+        Solution s = new Solution();
+        System.out.println(s.solution);
+    }
 }
