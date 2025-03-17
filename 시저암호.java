@@ -30,7 +30,7 @@ class Caesar {
     for (int i = 0; i < s.length(); i++) {
       char ch = s.charAt(i); // String의 각각의 인덱스를 문자로 변환 
       if (Character.isLowerCase(ch)) {
-        ch = (char) ((ch - 'a' + n) % 26 + 'a');
+        ch = (char) ((ch - 'a' + n) % 26 + 'a'); //  문자형 + 정수형 = 정수형
          // (i번째 인덱스 - 문자열 a + 밀어야하는 숫자) 
          // %26(26을 초과하면 알파벳이 아닐 수 있으니까) + '소문자 알파벳 시작 a '
       } else if (Character.isUpperCase(ch)) {
