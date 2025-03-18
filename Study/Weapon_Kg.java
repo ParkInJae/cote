@@ -10,8 +10,7 @@ public class Weapon_Kg{
 
          */
         // 약수 구하기 
-        /*빅오 사용 */
-
+        /*시간 복잡도 구하기 */
         int count = 0;
         for(int i =1;  i*i <= number; i++){  // -> 이 부분은 하나의 정수의 약수를 효율적으로 구하기 위한 알고리즘
             // 즉 전체를 순히하는 것이 아닌 단 하나의 정수에 대한 약수를 계산함
@@ -34,11 +33,12 @@ public class Weapon_Kg{
         return answer;
     }
  
-    /*
-    수정된 코드 
-    https://chatgpt.com/c/67d7fa60-716c-8005-8f12-813364200c22
-`   class Solution {
-    public int solution(int number, int limit, int power) {
+    
+   // 수정된 코드 
+     // https://chatgpt.com/c/67d7fa60-716c-8005-8f12-813364200c22
+
+    //   class Solution {
+    public int solution2(int number, int limit, int power) {
         int totalWeight = 0;
         
         for (int n = 1; n <= number; n++) {
@@ -66,6 +66,5 @@ public class Weapon_Kg{
 }
 
 
-    */
-
-}
+    
+// }
