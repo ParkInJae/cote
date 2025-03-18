@@ -33,7 +33,7 @@ class Solution {
   */  
     // 2. stream 함수 사용 
     // IntStream.rangeClosed(a,b) > a부터 b 까지의 모든 정수를 포함하는 스트림 새엇ㅇ
-    int answer[] = {};
+    
     return IntStream.rangeClosed(end_num, start_num) // 내림차순 기준 
     /* Intstream.rangeClosed(start_num , end_num)  >> 오름차순 기준 */
     .map(i ->  start_num - (i - end_num)).toArray();
