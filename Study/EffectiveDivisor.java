@@ -1,5 +1,5 @@
 
-public class EffectioveDivisor{
+public class EffectiveDivisor{
 
 
     /*
