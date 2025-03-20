@@ -1,5 +1,4 @@
-
-. CREATE 문
+1. CREATE 문
 테이블 생성 예시: employee_id,first_name,last_name,hire_date를 포함한 employees테이블을 생성하세요 
 CREATE TABLE employees (
     employee_id INT PRIMARY KEY,
