@@ -74,6 +74,10 @@ public class non_static_class_example { // non-static 클래스
 
         
 // 1. 부모 타입 변수 = new 자식 타입(); (O, 정상 작동)
+ /*
+ 	B타입은 A타입을 상속 받아 A와 B의 필드와 메소드 전부를 사용할 수 있음
+	 따라서 A 타입이 B 타입을 참조해도 A타입의 고유 필드와 메소드를 사용할 수 있기 때문에 에러가 발생하지 않음
+ */
         A aa = nsce.new B(); 
         
         aa.AMethod();
@@ -82,7 +86,12 @@ public class non_static_class_example { // non-static 클래스
 
 
 
-         //B bb = nsce.new A() // 블가능한 이유 
+         // B bb = nsce.new A() // 블가능한 이유 
+/*
+     B타입은 A타입을 받아 A와 B의 필드와 메소드 전부를 사용할 수 있음
+     그러나 B타입이 A타입을 참조하는 형태로 객체를 생성할 경우 A타입의 고유 필드와 메소드는 사용할 수 있지만
+    본인타입 (B타입)의 고유 필드와 메소드를 사용할 수 없기 때문에 위의 객체 생성 및 생성자 호출은 불가능하다.
+ */
     }
 
 
