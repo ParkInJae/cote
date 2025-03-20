@@ -1,56 +1,21 @@
 
 public class Weapon_Kg{
-    public int solution(int number, int limit, int power){  
-        /*
-            0. 전체 반복을 실행 
-            1. num의 약수를 구하기 
-            2, num의 약수는 power
-            3. power가 3을 넘기면 power는 3으로 고정 
-            4. 정해진 power의 1당 weigh도 1kg씩 증가 
-
-         */
-        // 약수 구하기 
-        /*시간 복잡도 구하기 */
-        int count = 0;
-        for(int i =1;  i*i <= number; i++){  // -> 이 부분은 하나의 정수의 약수를 효율적으로 구하기 위한 알고리즘
-            // 즉 전체를 순히하는 것이 아닌 단 하나의 정수에 대한 약수를 계산함
-            count = 0;
-            if(number % i == 0){  // 제곱근 구할 때 
-                count++;
-            }else if(i != number / i){
-                count++;
-            }
-        }
-
-        // power에 해당하는 무게 구하기 
-        if (count <= limit){
-            power += count;
-        }else {
-            power += 2;
-        }
-        int answer =power;
-
-        return answer;
-    }
- 
     
-   // 수정된 코드 
-     // https://chatgpt.com/c/67d7fa60-716c-8005-8f12-813364200c22
+  //   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/136798
+  public int solution(int number, int limit, int power) {
 
-    //   class Solution {
-    public int solution2(int number, int limit, int power) {
-        int totalWeight = 0;
-        
-        for (int n = 1; n <= number; n++) {
+      int totalWeight = 0; //  공격력에 대한 무게 
+      
+      for (int n = 1; n <= number; n++) {
             int count = 0;
             int sqrt = (int)Math.sqrt(n); //O(√n) 를 이용하기 때문에 sqrt를 이용해서 제곱근을 얻어옴
-            for (int i = 1; i <= sqrt; i++) {  
+            for (int i = 1; i <= sqrt; i++) {    // for (int i = 1; i * i<= num; i++) { 과 같은 코드임 
                 if (n % i == 0) {
                     // 약수가 하나라면 (제곱수인 경우)
-                    if(i * i == n)
-                        count++;
+                    if(i * i == n)  // 제곱근일 때 
+                    count++;
                     else
-                        count += 2;
+                        count += 2;  // 일반 약수일 때 
                 }
             }
             
@@ -64,7 +29,3 @@ public class Weapon_Kg{
         return totalWeight;
     }
 }
-
-
-    
-// }

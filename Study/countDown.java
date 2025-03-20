@@ -1,3 +1,4 @@
+
 /*
 정수 start_num과 end_num이 주어질 때, start_num에서 end_num까지의 수를 차례로 담은 
 리스트를 return하도록 solution 함수를 완성 
@@ -33,7 +34,7 @@ class Solution {
   */  
     // 2. stream 함수 사용 
     // IntStream.rangeClosed(a,b) > a부터 b 까지의 모든 정수를 포함하는 스트림 새엇ㅇ
-    
+    int answer[] = {};
     return IntStream.rangeClosed(end_num, start_num) // 내림차순 기준 
     /* Intstream.rangeClosed(start_num , end_num)  >> 오름차순 기준 */
     .map(i ->  start_num - (i - end_num)).toArray();
