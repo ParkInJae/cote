@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>전통적인 폼 제출 방식</title>
     <!--
     복기해야할 것 
     1. JQuery를 사용하기 위해 min.js가 필요하다 
@@ -15,48 +15,14 @@
     
     -->
     <!--jQuery 추가  -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        function JoinCheck(){
-
-            if($("#id").val() == ""){ // Jquery에서 $()를 css 선택자로 사용함
-                $("#IdMsg").html("아이디를 입력해주세요 "); // # >> id의 css 선택자 
-                $("#id").focus(); // # >> id
-                return false;
-            }
-            if($("#password").val() == "" ){ // password 공란일 때 
-                $("#pwMsg").html("비밀번호를 입력해주세요");
-                $("#password").focus();
-                return false;
-
-            }
-            return true;
-
-
-        }
-// 아이디 중복 검사 DB 활용해서 만들어야함 
-        function checkId(){
-            $.ajax({
-                url : "/user/checkIn.do" , // 절대 경로 설정 
-                method : post,
-                contentType: "application/json",
-                data:JSON.stringify({
-
-                })
-
-                
-
-            });
-        }
-    </script>
 </head>
 <body>
-    <form action="joinOk.do" method="post">
+    <form action="/user/joinOk.do" method="post">
         <table>
             <tr>
                 <th rowspan="2"> 아이디 : </th>
                 <td> <input type="text" id="id" name="id"></td>
-                <td><button type="button" onclick="checkID()">중복 검사</button></td> <!-- 중복 검사는 DB가 필요함-->
+                <td><button type="button" onclick="alert('중복검사해야함')" >중복 검사</button></td> <!-- 중복 검사는 DB가 필요함-->
             </tr>
             <tr>
                 <th> <span id="IdMsg"></span></th>
@@ -99,7 +65,7 @@
             </tr>
         </table>
         <div>
-            <button type="button" onclick="JoinCheck()">회원 가입 </button>
+            <button type="submit">회원 가입 </button>
         </div>
     </form>
 </body>
