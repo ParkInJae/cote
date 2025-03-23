@@ -30,15 +30,30 @@
                 return false;
 
             }
-            
+            return true;
+
+
         }
-
+// 아이디 중복 검사 DB 활용해서 만들어야함 
         function checkId(){
+            $.ajax({
+                url : "/user/checkIn.do" , // 절대 경로 설정 
+                method : post,
+                contentType: "application/json",
+                data:JSON.stringify({
 
+                })
+
+                
+
+            });
         }
     </script>
 </head>
 <body>
+    <form action="joinOk.do" method="post">
+
+    </form>
     <table>
         <tr>
             <th rowspan="2"> 아이디 : </th>
