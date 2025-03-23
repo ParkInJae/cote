@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전통적인 폼 제출 방식</title>
     <!--
-    복기해야할 것 
-    1. JQuery를 사용하기 위해 min.js가 필요하다 
-    2. 비밀번호나 다른 문자열을 입력하지 않았을 경우 밑에 입력하라고 작성하고 싶다면
-    <span>을 사용 후 선택자를 설정 후 script에서 해당 id를 선택 후 .html을 이용
-        ex) if($("idcheck").val()== ""){
-        $("#span_id").html("작성할 문자열 ")
-        }
-    
+   form 사용 방식과 , REST 방식의 차이점 
+   form 방식은 submit 후 서버에서 페이지 렌더링 하여 새로운 HTML 응답을 반환한다. 
     -->
     <!--jQuery 추가  -->
 </head>
 <body>
+    <!-- 폼 제출 시 서버에 POST 요청을 보내고 새 페이지로 이동 -->
     <form action="/user/joinOk.do" method="post">
         <table>
             <tr>
                 <th rowspan="2"> 아이디 : </th>
                 <td> <input type="text" id="id" name="id"></td>
-                <td><button type="button" onclick="alert('중복검사해야함')" >중복 검사</button></td> <!-- 중복 검사는 DB가 필요함-->
+                <!-- 
+                    아이디 중복 검사는 별도의 페이지나 서버 사이드 로직으로 처리 
+                    이때 서버 사이드 로직 > SSR (응답을 생성하는 로직)
+                    즉, 서버의 service같은 비즈니스 로직 처리 클래스에서 구현한 로직 
+                 -->
+                <td><button type="button" onclick="alert('SSR로 처리해야함')" >중복 검사</button></td> <!-- 중복 검사는 DB가 필요함-->
             </tr>
             <tr>
                 <th> <span id="IdMsg"></span></th>
