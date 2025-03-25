@@ -8,6 +8,13 @@ public class Find_primeNumber {
             if (num % i == 0) {
                 return 0;
             }
+            /* 
+            --if문의 실행부를 감싸는 {}가 없을 때는 다음의 한 줄만 영향을 받음
+
+            if (num % i == 0 ) 
+              return 0 ;
+
+            */
         }
         return 1;
     }
