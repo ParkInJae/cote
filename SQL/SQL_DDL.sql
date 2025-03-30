@@ -35,23 +35,29 @@ VIEW(뷰)::  실제 데이터를 저장하지 않고, SELECT 쿼리 결과를 �
 
 
 2. ALTER 문
-테이블 구조 변경 예시 (컬럼 추가): employees 테이블에 ADD 키워드를 사용하여 새로운 컬럼 email을 추가하세요 이때 email 컬럼은 100자의 문자열을 저장할 수있습니다. 
+-- 테이블 구조 변경 예시 (컬럼 추가): employees 테이블에 ADD 키워드를 사용하여 새로운 컬럼 email을 추가하세요 이때 email 컬럼은 100자의 문자열을 저장할 수있습니다. 
 ALTER TABLE employees
 ADD email VARCHAR(100);
 
 설명: VARCHAR(100)은 최대 100자의 문자열을 저장할 수 있습니다.
 
-테이블 구조 변경 예시 (컬럼 수정): employees 테이블의 hire_date 컬럼의 데이터 타입을 DATE에서 DATETIME으로 변경하세요.
+-- 테이블 구조 변경 예시 (컬럼 수정): employees 테이블의 hire_date 컬럼의 데이터 타입을 DATE에서 DATETIME으로 변경하세요.
 ALTER TABLE employees
 MODIFY hire_date DATETIME;
 
 설명: 이 구문은 사용하는 데이터베이스 종류에 따라 문법이 다를 수 있으므로(MySQL과 Oracle, PostgreSQL 등), 사용 중인 RDBMS의 문서를 참고해야 합니다.
 
+-- 테이블의 컬럼에 제약 조건 추가 예시 
+ALTER TABLE 테이블 명  MODIFY 칼럼 [제약조건]
+
+-- employees 테이블의 employee_id의 칼럼에 unique 제약 조건을 추가해주세요 
+ALTER TABLE employees
+MODIFY employee_id unique;
+
 3. RENAME 문
-테이블 이름 변경 예시 (MySQL의 경우): employees 테이블의 이름을 staff로 변경합니다.
+-- 테이블 이름 변경 예시 (MySQL의 경우): employees 테이블의 이름을 staff로 변경합니다.
 RENAME TABLE employees TO staff;
-설명:
-MySQL에서는 RENAME TABLE 구문을 사용하며, 동시에 여러 테이블의 이름을 변경할 수도 있습니다.
+설명: MySQL에서는 RENAME TABLE 구문을 사용하며, 동시에 여러 테이블의 이름을 변경할 수도 있습니다.
 
 PostgreSQL의 경우 (ALTER TABLE 사용):
 ALTER TABLE employees
@@ -60,18 +66,28 @@ RENAME TO staff;
 
 
 4. DROP 문
-테이블 삭제 예시: staff라는 테이블을 삭제해주세요 
-DROP TABLE staff;
-설명: 위 구문은 staff 테이블을 데이터베이스에서 완전히 삭제하며, 이때 삭제된 텡블의 데이터와 구조는 복구할 수 없으므로 주의해야 합니다.
+DROP TABLE 테이블명 [RESTRICT | CASCADE];
+-- CASCADE : 참조하는 테이블까지 연쇄적으로 제거하는 옵션 
+-- RESTRICT : 다른 테이블이 삭제할 테이블을 참조할 경우 제거하지 않는 옵션 
 
-뷰 삭제 예시: employees_names 라는 뷰를 삭제해주세요 
+-- employees 테이블 및 참조하는 테이블까지 모두 삭제 
+DROP TABLE employees CASCADE; 
+
+-- 다른 테이블이 employees 참조하지 않을 경우 삭제하고 참조할 경우 삭제하지 않는 쿼리
+DROP TABLE employees RESTRICT;
+
+-- 테이블 삭제 예시: staff라는 테이블을 삭제해주세요 
+DROP TABLE staff;
+-- 설명: 위 구문은 staff 테이블을 데이터베이스에서 완전히 삭제하며, 이때 삭제된 텡블의 데이터와 구조는 복구할 수 없으므로 주의해야 합니다.
+
+-- 뷰 삭제 예시: employees_names 라는 뷰를 삭제해주세요 
 DROP VIEW employee_names;
 설명: 이 구문은 employee_names 뷰를 데이터베이스에서 삭제하나, 뷰는 실제 데이터를 저장하지 않으므로, 삭제 시 데이터 손실 문제는 발생하지 않음 
 
 
 요약
-CREATE: 새 테이블이나 뷰를 생성합니다.
-ALTER: 기존 테이블의 구조(컬럼 추가, 수정, 삭제 등)를 변경합니다.
-RENAME: 테이블이나 뷰의 이름을 변경합니다.
-DROP: 테이블이나 뷰를 데이터베이스에서 완전히 삭제합니다.
-이 예제들은 다양한 데이터베이스 관리 시스템(RDBMS)에 따라 문법에 차이가 있을 수 있으므로, 실제 환경에서는 해당 DBMS의 공식 문서를 참고하여 사용해야함
+-- CREATE: 새 테이블이나 뷰를 생성합니다.
+-- ALER: 기존 테이블의 구조(컬럼 추가, 수정, 삭제 등)를 변경합니다.
+-- RENAME: 테이블이나 뷰의 이름을 변경합니다.
+-- DROP: 테이블이나 뷰를 데이터베이스에서 완전히 삭제합니다.
+-- 이 예제들은 다양한 데이터베이스 관리 시스템(RDBMS)에 따라 문법에 차이가 있을 수 있으므로, 실제 환경에서는 해당 DBMS의 공식 문서를 참고하여 사용해야함
