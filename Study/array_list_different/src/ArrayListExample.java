@@ -24,6 +24,17 @@ public class ArrayListExample{
         System.out.println("-------------------");
         System.out.println(arr2); // [World , Vinatect]이 출력됨
         System.out.println(arr3); // [하.. 문제 틀린거 너무 아쉽다..., null, 하...] 출력됨
+        System.out.println("-------------------");
+        System.out.println(arr3.get(0));
+        System.out.println("-------------------");
         
+        for(String m : arr){
+            System.out.println(m);
+        }
+        System.out.println("-------------------");
+
+        for(String m : arr2){
+            System.out.println(m);
+        }
     }
 }

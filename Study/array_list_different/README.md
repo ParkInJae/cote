@@ -1,20 +1,8 @@
-## Getting Started
+1.  vscode에서 자바 프로젝트 생성 및 실행 
+https://kim-oriental.tistory.com/22
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+2.  mybatis -mysql-Spring 연동
+https://hbeige.tistory.com/entry/Spring-sts3%EC%97%90%EC%84%9C-Mybatis-MySql-Spring-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0  
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-
-# 자바 프로젝 
+3. oracle DB 스프링 연동
+https://persimmon-ary-stepbystep.tistory.com/87
