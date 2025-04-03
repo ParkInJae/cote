@@ -1,18 +1,3 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+# (int)Math.sqrt(n);
+시간 복잡도를 가져올 때, (int)Math.sqrt(정수 n) 메소드를 사용하면 정수 n의 
+제곱근을 사용해서,약수의 개수를 구할 때 1부터 n까지 전체 반복하면서 계산하는 과정에서  반절을 줄일 수 있는 효율적인 방법이다. 
