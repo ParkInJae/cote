@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/c9d080af-9b1d-4e7b-a036-cc45de789b8b)
 
 
 <h1>
@@ -89,7 +90,9 @@ select 1 from 테이블명 where 조건식;
 
 <hr>
 종합 정리 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/be783247-a62a-47c6-946a-c158247b6214)
+
+
 
 
 
