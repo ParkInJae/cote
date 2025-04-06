@@ -19,5 +19,6 @@ SELECT "이름", "부서" FROM "직원";
 
 <h2>꼭 필요한 경우는 언제???</h2>
 
-![alt text](image.png)
+![Image](https://github.com/user-attachments/assets/7ee1b020-8447-4d02-bc5e-4086f5bf18d9)
+
 
