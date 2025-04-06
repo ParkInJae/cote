@@ -90,7 +90,8 @@ select 1 from 테이블명 where 조건식;
 
 <hr>
 종합 정리 
-![image](https://github.com/user-attachments/assets/be783247-a62a-47c6-946a-c158247b6214)
+![Image](https://github.com/user-attachments/assets/ba5a6e2d-5f3a-4006-a6d4-364ccb2837ac)
+
 
 
 
