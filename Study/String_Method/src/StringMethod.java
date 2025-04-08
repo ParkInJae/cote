@@ -1,4 +1,4 @@
-public class App {
+public class StringMethod {
 /*
     String_Method()  종류 
      char	charAt(int index)	특정 위치의 문자를 리턴합니다.
