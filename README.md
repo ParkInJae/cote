@@ -198,3 +198,11 @@ B가 A를 상속 받았을 때 b가 참조하는 객체는 A이지만, B 타입�
 A의 주소를 참조하고 있기 때문에 B타입이 본인의 고유 필드와 메소드를 사용할 수 없기 때문에 허용되지 않는다. 
 
 강제 형변환은 원본 객체가 실제로 자식 타입일 때만 가능! ( (B) a) 
+
+
+# git 에러 내용 
+fatal: not a git repository (or any of the parent directories): .git
+<br/>
+VSCode의 terminal 통해서 git과 연동할 때, 디렉토리에 .git이 없을 경우 발생함 
+<br/><br/>
+해결방법  :: cd를 통해서 .git이 있는 폴더로 이동 후 git pull origin 브랜치명 사용하면 해결됨 <br/>
